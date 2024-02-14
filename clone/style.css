@@ -37,7 +37,7 @@ a{
 .twittContainer{
   border-color: transparent transparent var(--primary-color-grey) transparent;
   width: 650px;
-  height: 450px;
+  height: 400px;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(12, 1fr);
   display: grid;
