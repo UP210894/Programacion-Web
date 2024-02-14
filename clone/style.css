@@ -1,0 +1,176 @@
+/**: Selector universal
+  id: Selectotr id*/
+
+:root{
+  --primary-color-grey: #6e7886;
+  --primary-color-grey-50: rgba(110, 120, 134, 0.1);
+  --color-icon-comentario:rgba(29, 161, 242);
+  --color-icon-comentario-50:rgba(29, 161, 242, 0.4);
+  --color-icon-retwit:rgba(24, 176, 95);
+  --color-icon-retwit-50:rgba(24, 176, 95, 0.4);
+  --color-icon-like:rgba(224, 36, 94);
+  --color-icon-like-50:rgba(224, 36, 94, 0.4);
+  --color-icon-compartir:rgba(30, 148, 221);
+  --color-icon-compartir-50:rgba(30, 148, 221, 0.4);
+
+}
+
+
+*{
+    background-color:#15202b;
+    padding: 0%;
+    margin: 0%;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #ffffff;    
+    box-sizing: border-box;
+}
+
+a{
+  color: rgb(71, 71, 239);
+  text-decoration: none;
+}
+
+.classArroba{
+  color:var(--primary-color-grey);
+}
+
+.twittContainer{
+  border-color: transparent transparent var(--primary-color-grey) transparent;
+  width: 650px;
+  height: 450px;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(12, 1fr);
+  display: grid;
+
+}
+
+.twittContainer *{
+  background-color: transparent;
+}
+
+.twittBody{
+  grid-column: 1/13 ;
+  grid-row: 1/11;
+  grid-template-columns: 75px 1fr;
+  display: grid;
+}
+
+.twittIcons{
+  grid-column: 1/13;
+  grid-row: 12/13;
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-evenly;
+  
+}
+
+img, svg{
+  max-width: 100%;
+  max-height: auto;
+}
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.icono {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icono svg {
+  width: 40%;
+  margin-right: 7px;
+  fill: var(--primary-color-grey);
+}
+
+.icono span{
+  font-size: small;
+  color: var(--primary-color-grey);
+}
+
+.twittIcon > img{
+  border-radius: 50%;
+  margin: 10px;
+  width: 75%;
+}
+
+.twittBody p{
+  padding: 10px 0px
+}
+
+.twittBody img{
+  border-radius: 30px;
+}
+
+.twittContent img{
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color:var(--primary-color-grey);
+  width: 85%;
+}
+
+.twittContainer:hover{
+  cursor: pointer;
+  background-color: var(--primary-color-grey-50);
+  border-radius: 10px;
+  transition-duration: 0.3s;
+}
+
+.twittBody p{
+  padding: 10px 0px;
+}
+
+.twittContent img{
+border-radius: 30px;
+border-style: solid;
+border-width: 1px;
+}
+
+.twittContent:hover{
+  cursor: pointer;
+  border-color: var(--primarycolorgrey50)
+}
+
+/*
+.twittIcons:nth-child(){
+  background-color: transparent;
+  cursor: alias;
+}
+*/
+
+.icono:nth-child(1):hover svg{
+  border-radius: 50%;
+  background-color: var(--color-icon-comentario-50);
+  fill: var(--color-icon-comentario);
+  transition: .5s;
+}
+
+.icono:nth-child(2):hover svg{
+  border-radius: 50%;
+  background-color: var(--color-icon-retwit-50);
+  fill: var(--color-icon-retwit);
+  transition: .5s;
+
+}
+
+.icono:nth-child(3):hover svg{
+  border-radius: 50%;
+  background-color: var(--color-icon-like-50);
+  fill: var(--color-icon-like);
+  transition: .5s;
+}
+
+.icono:nth-child(4):hover svg{
+  border-radius: 50%;
+  background-color: var(--color-icon-compartir-50);
+  fill: var(--color-icon-comentario);
+  transition: .5s;
+}
