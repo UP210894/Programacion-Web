@@ -2,6 +2,8 @@
 const userSelect = document.getElementById('select-users');
 const userContainer = document.getElementById('user-container');
 const taskContainer = document.getElementById('task-container');
+const taskButton = document.getElementById("tareas");
+
 
 
 // Codígo nesesario para mostrar información
@@ -11,8 +13,15 @@ userSelect.addEventListener('change', () => {
 
     const IdUsuario= parseInt(userSelect.value);
     console.log(IdUsuario);
-        updateTheUserAndTasks(IdUsuario);
+    updateTheUserAndTasks(IdUsuario);
 });
+
+taskButton.addEventListener('click', () => {
+    const IdUsuario= parseInt(userSelect.value);
+    getTask(IdUsuario).then (task =>{
+        showTasks(task);
+    })
+})
 
 
 function updateTheUserAndTasks(userId){
@@ -22,12 +31,7 @@ function updateTheUserAndTasks(userId){
                 showUserInformation(usuario);
                 return getTask(userId);
             }
-        })
-
-        .then(tasks => {
-            showTasks(tasks);
-        });
-
+    })
 }
 
 
