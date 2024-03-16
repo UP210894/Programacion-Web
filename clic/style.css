@@ -20,7 +20,7 @@ body{
     background-color: var(--black-color);
 }
 
-button :active{
+button:active{
     opacity: 0.7;
 }
 
